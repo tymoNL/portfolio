@@ -1,0 +1,35 @@
+header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+
+    .mainMenu {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 15px 0;
+
+        a {
+            text-decoration: none;
+            color: light-dark(var(--color-light), var(--color-dark));
+            font-weight: bold;
+            transition: color 0.3s ease;
+
+            &:hover, &:focus {
+                color: var(--color-blue);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: light-dark(var(--color-light), var(--color-dark));
+    color: light-dark(var(--color-dark), var(--color-light));
+
+    .footerBottom {
+        border-top: 1px solid light-dark(var(--color-dark), var(--color-light));
+        text-align: center;
+    }
+}

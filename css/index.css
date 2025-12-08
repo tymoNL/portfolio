@@ -1,0 +1,29 @@
+.interesseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px), 1fr));
+    gap: 20px;
+    padding: 40px 0;
+
+    .interesseItem {
+        background-color: light-dark(var(--color-green), var(--color-red));
+        color: light-dark(var(--color-dark), var(--color-light));
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover, &:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            text-align: center;
+
+            i {
+                font-size: 50px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
