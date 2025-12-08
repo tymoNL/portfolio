@@ -1,16 +1,16 @@
 .interesseGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(200px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 20px;
     padding: 40px 0;
 
     .interesseItem {
-        background-color: light-dark(var(--color-green), var(--color-red));
+        background-color: light-dark(var(--color-light), var(--color-dark));
         color: light-dark(var(--color-dark), var(--color-light));
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: var(--transition);
 
         &:hover, &:focus {
             transform: translateY(-5px);
@@ -24,6 +24,27 @@
                 font-size: 50px;
                 padding-bottom: 15px;
             }
+        }
+    }
+}
+
+.projectenGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+    gap: 20px;
+    padding: 40px 0;
+
+    .projectItem {
+        background-color: light-dark(var(--color-light), var(--color-dark));
+        color: light-dark(var(--color-dark), var(--color-light));
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+
+        &:hover, &:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
     }
 }

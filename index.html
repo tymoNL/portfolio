@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font.css" />
 
     <!-- JS -->
     <script src="js/script.js" defer></script>
@@ -29,6 +30,7 @@
             <nav class="mainMenu">
                 <a href="#interesses">Interesses</a>
                 <a href="#projecten">Projecten</a>
+                <a href="#cv">CV</a>
             </nav>
         </section>
     </header>
@@ -43,19 +45,26 @@
             </div>
         </section>
 
-        <section class="container">
-            <h1>Welkom op mijn portfolio!</h1>
-            <p>Hallo! Mijn naam is Tymo Smids en dit is mijn portfolio website.</p>
-        </section>
-
         <Section class="container">
-            <section id="interesses" class="interesseGrid">
+            <h2 id="interesses">Mijn interesses</h2>
+            <hr />
+            <p>
+                Hier vind je een overzicht van mijn projecten en interesses. Ik ben gepassioneerd door webdevelopment en
+                honkbal, en ik deel graag mijn werk en hobby's met jou. Neem gerust een kijkje rond en ontdek wat ik te
+                bieden heb!
+            </p>
+
+            <section class="interesseGrid">
                 <div class="interesseItem">
                     <div class="icon">
                         <i class="fas fa-desktop"></i>
                         <hr />
                     </div>
-                    <h2>Webdevelopment</h2>
+                    <h3>Webdevelopment</h3>
+                    <p>
+                        Ik ben gefascineerd door het creëren van dynamische en responsieve websites. Van front-end
+                        design tot back-end ontwikkeling, ik geniet van het hele proces van webdevelopment.
+                    </p>
                 </div>
 
                 <div class="interesseItem">
@@ -63,24 +72,129 @@
                         <i class="fas fa-baseball"></i>
                         <hr />
                     </div>
-                    <h2>Honkbal</h2>
+                    <h3>Honkbal</h3>
+                    <p>
+                        Honkbal is mijn favoriete sport. Ik speel zelf in een team en volg de professionele leagues
+                        nauwgezet. De strategie en teamwork die bij honkbal komen kijken, spreken mij enorm aan.
+                    </p>
                 </div>
+
+                <div class="interesseItem">
+                    <div class="icon">
+                        <i class="fas fa-gamepad"></i>
+                        <hr />
+                    </div>
+                    <h3>Games</h3>
+                    <p>
+                        Naast mijn interesse in webdevelopment en honkbal, ben ik ook een fervent gamer. Ik geniet van
+                        verschillende genres en vind het leuk om nieuwe games te ontdekken en te spelen in mijn vrije
+                        tijd.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="projecten">Mijn projecten</h2>
+                <hr />
+                <p>
+                    Hier zijn enkele van mijn recente projecten op het gebied van webdevelopment. Elk project
+                    vertegenwoordigt mijn vaardigheden en passie voor het vak.
+                </p>
+
+                <section class="projectenGrid">
+                    <div class="projectItem">
+                        <h3>Portfolio Website</h3>
+                        <p>
+                            Mijn persoonlijke portfolio website, waar ik mijn werk en interesses deel. Gebouwd met
+                            <b>HTML</b>,
+                            <b>CSS</b> en <b>JavaScript</b>.
+                        </p>
+                    </div>
+
+                    <div class="projectItem">
+                        <h3>Honkbal Statistieken App</h3>
+                        <p>
+                            Een webapplicatie die honkbalstatistieken bijhoudt en analyseert. Gebouwd met React en
+                            Node.js.
+                        </p>
+                    </div>
+
+                    <div class="projectItem">
+                        <h3>Game Review Blog</h3>
+                        <p>
+                            Een blogplatform waar ik game-recensies schrijf en deel. Gebouwd met WordPress en aangepast
+                            met
+                            custom thema's.
+                        </p>
+                    </div>
+                </section>
+
+                <p>
+                    Voor meer informatie over mijn projecten of om contact met mij op te nemen, bezoek mijn
+                    <a href="https://github.com/tymoNL" target="_blank"><b>GitHub</b></a> pagina.
+                </p>
+            </section>
+
+            <section class="cv">
+                <h2 id="cv">Mijn CV</h2>
+                <hr />
+                <p>
+                    Je kunt mijn volledige CV bekijken en downloaden via de volgende link: <a href="documenten/CV.pdf"
+                        target="_blank" class="cvButton">Bekijk/Download CV</a>
+                </p>
             </section>
         </Section>
     </main>
 
-    <aside class="fixedButtons">
-        <a href="javascript:;" class="lightDarkToggle" title="Kleurmodus switch" onclick="ToggleColorMode(this);"><i class="fas fa-moon"></i></a>
-        <a href="#top" class="backToTop" title="Terug naar boven"><i class="fas fa-arrow-up"></i></a>
-    </aside>
-
     <footer>
+        <section class="container">
+            <section class="footerTop">
+                <section>
+                    <h3>Navigatie</h3>
+                    <ul>
+                        <li><a href="#interesses">Interesses</a></li>
+                        <li><a href="#projecten">Projecten</a></li>
+                        <li><a href="#cv">CV</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:tymo.smids@gmail.com">tymo.smids@gmail.com</a></li>
+                        <li><a href="tel:0628406999">06 (+31) 28406999</a></li>
+                        <li>1713HN Obdam</li>
+                        <li>Dorpsstraat 172</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Social media</h3>
+                    <nav class="socials">
+                        <a href="https://www.facebook.com/tymo.smids" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@tymosmids" target="_blank"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/tymosmids/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/tymo-smids-884143196/"><i class="fa-brands fa-linkedin-in"
+                                target="_blank"></i></a>
+                    </nav>
+                </section>
+            </section>
+        </section>
+
         <section class="footerBottom">
             <div class="container">
                 <p>© 2024 Tymo Smids. Alle rechten voorbehouden.</p>
             </div>
         </section>
     </footer>
+
+        <aside class="fixedButtons">
+        <a href="javascript:;" class="lightDarkToggle" title="Kleurmodus switch" onclick="ToggleColorMode(this);"><i
+                class="fas fa-moon"></i></a>
+        <a href="#top" class="backToTop" title="Terug naar boven"><i class="fas fa-arrow-up"></i></a>
+    </aside>
 </body>
 
 </html>

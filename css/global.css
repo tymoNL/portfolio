@@ -4,11 +4,22 @@
     --color-green: #D1D646;
     --color-red: #F97068;
     --color-blue: #57C4E5;
+    --font-family: "Quicksand", sans-serif;
+
+    --interactive-color: light-dark(var(--color-green), var(--color-red));
+    --interactive-color-reverse: light-dark(var(--color-red), var(--color-green));
+
+    --heading-color: var(--color-blue);
+
+    --transition: all 0.3s ease-out;
 
     color-scheme: light dark;
-    scroll-behavior: smooth;
 
-    scroll-margin-top: 2rem;
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+
+    scroll-behavior: smooth;
 
     &:has(body.darkMode) {
         color-scheme: dark;
@@ -25,6 +36,44 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    scroll-margin-top: 1.5em;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+h5 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+h6 {
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+}
+
+a {
+    color: var(--interactive-color);
+    transition: var(--transition);
+
+    &:hover, &:focus {
+        color: var(--interactive-color-reverse);
+    }
+}
+
 body {
     margin: 0;
     display: grid;
@@ -33,6 +82,8 @@ body {
     min-height: 100dvh;
     color: light-dark(var(--color-dark), var(--color-light));
     background-color: light-dark(var(--color-light), var(--color-dark));
+    font-family: var(--font-family);
+    transition: var(--transition);
 }
 
 hr {
@@ -59,7 +110,7 @@ hr {
         display: block;
         object-fit: cover;
         object-position: center;
-        aspect-ratio: 3 / 1;
+        max-height: 450px;
     }
 
     .heroText {
@@ -83,16 +134,22 @@ hr {
     a {
         background-color: light-dark(var(--color-dark), var(--color-light));
         color: light-dark(var(--color-light), var(--color-dark));
-        padding: 0.5rem 0.75rem;
+        border: 1px solid light-dark(var(--color-dark), var(--color-light));
+        padding: 0.75rem 0.75rem;
         border-radius: 0.5rem;
         text-decoration: none;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-out;
+        transition: var(--transition);
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover,
         &:focus {
             background-color: light-dark(var(--color-light), var(--color-dark));
             color: light-dark(var(--color-dark), var(--color-light));
+            border: 1px solid light-dark(var(--color-dark), var(--color-light));
         }
     }
 }

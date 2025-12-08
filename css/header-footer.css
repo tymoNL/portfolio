@@ -1,9 +1,22 @@
+body.scrolled {
+    header {
+        background-color: light-dark(var(--color-light), var(--color-dark));
+        color: light-dark(var(--color-dark), var(--color-light));
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        a {
+            color: light-dark(var(--color-dark), var(--color-light));
+        }
+    }
+}
+
 header {
     background-color: transparent;
     position: fixed;
     top: 0;
     z-index: 10;
     width: 100%;
+    transition: var(--transition);
 
     .mainMenu {
         display: flex;
@@ -15,10 +28,11 @@ header {
             text-decoration: none;
             color: light-dark(var(--color-light), var(--color-dark));
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: var(--transition);
 
-            &:hover, &:focus {
-                color: var(--color-blue);
+            &:hover,
+            &:focus {
+                color: var(--interactive-color);
             }
         }
     }
@@ -27,8 +41,41 @@ header {
 footer {
     background-color: light-dark(var(--color-light), var(--color-dark));
     color: light-dark(var(--color-dark), var(--color-light));
+    transition: var(--transition);
+
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    .footerTop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+
+        .socials {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            a {
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
 
     .footerBottom {
+        margin-top: 2rem;
         border-top: 1px solid light-dark(var(--color-dark), var(--color-light));
         text-align: center;
     }
