@@ -10,6 +10,7 @@
     --interactive-color-reverse: light-dark(var(--color-red), var(--color-green));
 
     --heading-color: var(--color-blue);
+    --header_footer-background: #444;
 
     --transition: all 0.3s ease-out;
 
@@ -20,6 +21,9 @@
     }
 
     scroll-behavior: smooth;
+
+    /* View Transition */
+    view-transition-name: root;
 
     &:has(body.darkMode) {
         color-scheme: dark;
@@ -36,7 +40,12 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--heading-color);
     scroll-margin-top: 1.5em;
 }
@@ -69,8 +78,31 @@ a {
     color: var(--interactive-color);
     transition: var(--transition);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: var(--interactive-color-reverse);
+    }
+}
+
+button, .button {
+    background-color: var(--interactive-color);
+    color: light-dark(var(--color-light), var(--color-dark));
+    border: 1px solid var(--interactive-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+        background-color: var(--interactive-color-reverse);
+        color: light-dark(var(--color-dark), var(--color-light));
+        border: 1px solid var(--interactive-color-reverse);
     }
 }
 
@@ -78,11 +110,12 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     min-height: 100dvh;
     color: light-dark(var(--color-dark), var(--color-light));
     background-color: light-dark(var(--color-light), var(--color-dark));
     font-family: var(--font-family);
+    font-weight: 500;
     transition: var(--transition);
 }
 
@@ -153,3 +186,33 @@ hr {
         }
     }
 }
+
+/* View Transition Styles */
+@view-transition {
+    navigation: auto;
+}
+
+html::view-transition {
+    animation-duration: 0.3s;
+}
+
+::view-transition-old(root) {
+    opacity: 1;
+}
+
+::view-transition-new(root) {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* View Transition Styles */

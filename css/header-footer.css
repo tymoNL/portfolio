@@ -1,22 +1,10 @@
-body.scrolled {
-    header {
-        background-color: light-dark(var(--color-light), var(--color-dark));
-        color: light-dark(var(--color-dark), var(--color-light));
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-        a {
-            color: light-dark(var(--color-dark), var(--color-light));
-        }
-    }
-}
-
 header {
-    background-color: transparent;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 10;
     width: 100%;
     transition: var(--transition);
+    background: var(--header_footer-background);
 
     .mainMenu {
         display: flex;
@@ -26,25 +14,32 @@ header {
 
         a {
             text-decoration: none;
-            color: light-dark(var(--color-light), var(--color-dark));
-            font-weight: bold;
             transition: var(--transition);
+            color: var(--interactive-color);
 
             &:hover,
             &:focus {
-                color: var(--interactive-color);
+                color: var(--interactive-color-reverse);
+                font-weight: bold;
+            }
+
+            &.active {
+                color: var(--interactive-color-reverse);
+                font-weight: bold;
             }
         }
     }
 }
 
 footer {
-    background-color: light-dark(var(--color-light), var(--color-dark));
-    color: light-dark(var(--color-dark), var(--color-light));
+    background-color: var(--header_footer-background);
+    margin-top: 2rem;
+    color: var(--color-light);
     transition: var(--transition);
 
     a {
         text-decoration: none;
+        color: var(--interactive-color);
 
         &:hover,
         &:focus {
@@ -76,7 +71,7 @@ footer {
 
     .footerBottom {
         margin-top: 2rem;
-        border-top: 1px solid light-dark(var(--color-dark), var(--color-light));
+        border-top: 1px solid var(--color-light);
         text-align: center;
     }
 }

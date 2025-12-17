@@ -1,0 +1,19 @@
+.onderzoekGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1rem;
+
+    .onderzoekItem {
+        background-color: light-dark(var(--color-light), var(--color-dark));
+        color: light-dark(var(--color-dark), var(--color-light));
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+
+        &:hover, &:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
