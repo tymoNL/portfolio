@@ -1,5 +1,21 @@
 .hero {
     text-align: center;
+    margin-top: 2rem;
+
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
 }
 
 .interesseGrid {
@@ -16,7 +32,8 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             transform: translateY(-5px);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
@@ -46,7 +63,8 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             transform: translateY(-5px);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
