@@ -1,3 +1,4 @@
+/*
 header {
     position: sticky;
     top: 0;
@@ -30,6 +31,7 @@ header {
         }
     }
 }
+    */
 
 footer {
     background-color: var(--header_footer-background);
